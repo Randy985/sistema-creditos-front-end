@@ -26,6 +26,51 @@
       "plazo": "60 días",
       "analista": "Javier Pineda",
       "estado": "Rechazado"
+    },
+    {
+      "id": 104,
+      "solicitante": "Pedro Martínez",
+      "tipoCredito": "Crédito personal",
+      "monto": 25000,
+      "plazo": "45 días",
+      "analista": "Sofía Torres",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 105,
+      "solicitante": "Constructora Beta Ltda.",
+      "tipoCredito": "Crédito comercial",
+      "monto": 95000,
+      "plazo": "90 días",
+      "analista": "Luis Gómez",
+      "estado": "Aprobado"
+    },
+    {
+      "id": 106,
+      "solicitante": "Laura Ramírez",
+      "tipoCredito": "Crédito educativo",
+      "monto": 12000,
+      "plazo": "6 meses",
+      "analista": "Ana Castillo",
+      "estado": "En revisión"
+    },
+    {
+      "id": 107,
+      "solicitante": "Servicios Delta S.A.",
+      "tipoCredito": "Crédito herramientas",
+      "monto": 36000,
+      "plazo": "75 días",
+      "analista": "Luis Gómez",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 108,
+      "solicitante": "Andrés Navarro",
+      "tipoCredito": "Crédito vivienda",
+      "monto": 130000,
+      "plazo": "24 meses",
+      "analista": "Sofía Torres",
+      "estado": "Aprobado"
     }
   ]
 }

@@ -26,11 +26,61 @@
       "plazo": "60 días",
       "tasa": "6.5%",
       "estado": "Aprobado"
+    },
+    {
+      "id": 4,
+      "tipo": "Crédito personal",
+      "persona": "Natural",
+      "monto": 18000,
+      "plazo": "45 días",
+      "tasa": "7%",
+      "estado": "Rechazado"
+    },
+    {
+      "id": 5,
+      "tipo": "Crédito comercial",
+      "persona": "Jurídica",
+      "monto": 85000,
+      "plazo": "90 días",
+      "tasa": "9%",
+      "estado": "Aprobado"
+    },
+    {
+      "id": 6,
+      "tipo": "Crédito automotriz",
+      "persona": "Natural",
+      "monto": 56000,
+      "plazo": "12 meses",
+      "tasa": "10%",
+      "estado": "En análisis"
+    },
+    {
+      "id": 7,
+      "tipo": "Crédito educativo",
+      "persona": "Natural",
+      "monto": 15000,
+      "plazo": "6 meses",
+      "tasa": "4.5%",
+      "estado": "Aprobado"
+    },
+    {
+      "id": 8,
+      "tipo": "Crédito vivienda",
+      "persona": "Jurídica",
+      "monto": 120000,
+      "plazo": "24 meses",
+      "tasa": "11%",
+      "estado": "Ingresado"
     }
   ],
   "creditTypes": [
     { "id": 1, "nombre": "Crédito 7 días", "plazo": "7 días", "tasa": "5%" },
     { "id": 2, "nombre": "Crédito 8-30 días", "plazo": "30 días", "tasa": "8%" },
-    { "id": 3, "nombre": "Crédito de herramientas", "plazo": "60 días", "tasa": "6.5%" }
+    { "id": 3, "nombre": "Crédito de herramientas", "plazo": "60 días", "tasa": "6.5%" },
+    { "id": 4, "nombre": "Crédito personal", "plazo": "45 días", "tasa": "7%" },
+    { "id": 5, "nombre": "Crédito comercial", "plazo": "90 días", "tasa": "9%" },
+    { "id": 6, "nombre": "Crédito automotriz", "plazo": "12 meses", "tasa": "10%" },
+    { "id": 7, "nombre": "Crédito educativo", "plazo": "6 meses", "tasa": "4.5%" },
+    { "id": 8, "nombre": "Crédito vivienda", "plazo": "24 meses", "tasa": "11%" }
   ]
 }

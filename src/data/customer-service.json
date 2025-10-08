@@ -23,6 +23,46 @@
       "monto": 42000,
       "estadoContrato": "Pendiente",
       "pagaré": "Pendiente"
+    },
+    {
+      "id": 204,
+      "cliente": "Pedro Martínez",
+      "tipoCredito": "Crédito personal",
+      "monto": 25000,
+      "estadoContrato": "Generado",
+      "pagaré": "Firmado"
+    },
+    {
+      "id": 205,
+      "cliente": "Constructora Beta Ltda.",
+      "tipoCredito": "Crédito comercial",
+      "monto": 95000,
+      "estadoContrato": "Enviado",
+      "pagaré": "Firmado"
+    },
+    {
+      "id": 206,
+      "cliente": "Laura Ramírez",
+      "tipoCredito": "Crédito educativo",
+      "monto": 12000,
+      "estadoContrato": "Pendiente",
+      "pagaré": "Pendiente"
+    },
+    {
+      "id": 207,
+      "cliente": "Servicios Delta S.A.",
+      "tipoCredito": "Crédito herramientas",
+      "monto": 36000,
+      "estadoContrato": "Enviado",
+      "pagaré": "Firmado"
+    },
+    {
+      "id": 208,
+      "cliente": "Andrés Navarro",
+      "tipoCredito": "Crédito vivienda",
+      "monto": 130000,
+      "estadoContrato": "Generado",
+      "pagaré": "Firmado"
     }
   ]
 }

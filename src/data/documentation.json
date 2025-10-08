@@ -34,6 +34,41 @@
       "tipoPersona": "Natural / Jurídica",
       "tipoCredito": "Todos",
       "estado": "Incompleto"
+    },
+    {
+      "id": 6,
+      "nombre": "Comprobante de ingresos",
+      "tipoPersona": "Natural",
+      "tipoCredito": "Crédito 8-30 días",
+      "estado": "Cargado"
+    },
+    {
+      "id": 7,
+      "nombre": "Estados financieros últimos 2 años",
+      "tipoPersona": "Jurídica",
+      "tipoCredito": "Crédito herramientas",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 8,
+      "nombre": "Copia de recibo de servicios básicos",
+      "tipoPersona": "Natural",
+      "tipoCredito": "Crédito personal",
+      "estado": "Cargado"
+    },
+    {
+      "id": 9,
+      "nombre": "Contrato de arrendamiento o propiedad",
+      "tipoPersona": "Natural / Jurídica",
+      "tipoCredito": "Crédito comercial",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 10,
+      "nombre": "Certificación bancaria",
+      "tipoPersona": "Jurídica",
+      "tipoCredito": "Crédito herramientas",
+      "estado": "Cargado"
     }
   ]
 }
