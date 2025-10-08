@@ -23,7 +23,7 @@ export const useAuthStore = defineStore("auth", {
       this.error = "";
 
       try {
-        const res = await fetch("/src/data/usuarios.json");
+        const res = await fetch("/usuarios.json");
         const data = await res.json();
 
         // Asegura que el contenido sea un array
