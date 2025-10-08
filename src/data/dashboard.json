@@ -1,0 +1,31 @@
+{
+  "solicitudes": {
+    "aprobadas": 245,
+    "rechazadas": 52,
+    "pendientes": 88
+  },
+  "montos": [
+    { "tipo": "Crédito 7 días", "monto": 25000 },
+    { "tipo": "Crédito 8-30 días", "monto": 48000 },
+    { "tipo": "Crédito herramientas", "monto": 32000 },
+    { "tipo": "Crédito automotriz", "monto": 76000 },
+    { "tipo": "Crédito personal", "monto": 67000 },
+    { "tipo": "Crédito comercial", "monto": 54000 },
+    { "tipo": "Crédito educativo", "monto": 38000 },
+    { "tipo": "Crédito vivienda", "monto": 91000 }
+  ],
+  "documentos": {
+    "cargados": 5,
+    "pendientes": 4,
+    "incompletos": 1
+  },
+  "contratos": {
+    "generados": 3,
+    "enviados": 3,
+    "pendientes": 2
+  },
+  "pagare": {
+    "firmados": 5,
+    "pendientes": 3
+  }
+}

@@ -3,11 +3,11 @@
     <!-- ENCABEZADO -->
     <v-card class="mb-6" elevation="3">
       <v-card-title class="d-flex align-center text-h5">
-        <v-icon color="primary" class="me-3">mdi-chart-line</v-icon>
+        <v-icon color="primary" class="me-3">mdi-chart-box</v-icon>
         Analítica de créditos
       </v-card-title>
       <v-card-subtitle>
-        Reportes visuales de solicitudes, montos y estatus de aprobación.
+        Análisis avanzado de solicitudes, montos y comportamiento de aprobación.
       </v-card-subtitle>
     </v-card>
 
@@ -23,31 +23,47 @@
     </v-row>
 
     <!-- GRAFICOS -->
-  <!-- GRAFICOS -->
-<v-row dense>
-  <v-col cols="12" md="6">
-    <v-card elevation="2" class="pa-4 d-flex flex-column align-center justify-center" style="height: 380px;">
-      <div class="text-subtitle-1 font-weight-medium mb-4">
-        Distribución de solicitudes
-      </div>
-      <div style="max-width: 280px; width: 100%;">
-        <canvas id="chartSolicitudes"></canvas>
-      </div>
-    </v-card>
-  </v-col>
+    <v-row dense>
+      <!-- GRÁFICO 1: barras horizontales -->
+      <v-col cols="12" md="6">
+        <v-card elevation="2" class="pa-4">
+          <div class="text-subtitle-1 font-weight-medium mb-4 text-center">
+            Solicitudes por estatus
+          </div>
+          <canvas id="chartSolicitudesH"></canvas>
+        </v-card>
+      </v-col>
 
-  <v-col cols="12" md="6">
-    <v-card elevation="2" class="pa-4 d-flex flex-column align-center justify-center" style="height: 380px;">
-      <div class="text-subtitle-1 font-weight-medium mb-4">
-        Montos aprobados por tipo de crédito
-      </div>
-      <div style="max-width: 550px; width: 100%;">
-        <canvas id="chartMontos"></canvas>
-      </div>
-    </v-card>
-  </v-col>
-</v-row>
+      <!-- GRÁFICO 2: línea -->
+      <v-col cols="12" md="6">
+        <v-card elevation="2" class="pa-4">
+          <div class="text-subtitle-1 font-weight-medium mb-4 text-center">
+            Evolución de montos aprobados
+          </div>
+          <canvas id="chartLineaMontos"></canvas>
+        </v-card>
+      </v-col>
 
+      <!-- GRÁFICO 3: radar -->
+      <v-col cols="12" md="6">
+        <v-card elevation="2" class="pa-4">
+          <div class="text-subtitle-1 font-weight-medium mb-4 text-center">
+            Comparativa entre tipos de crédito
+          </div>
+          <canvas id="chartRadar"></canvas>
+        </v-card>
+      </v-col>
+
+      <!-- GRÁFICO 4: polar area -->
+      <v-col cols="12" md="6">
+        <v-card elevation="2" class="pa-4">
+          <div class="text-subtitle-1 font-weight-medium mb-4 text-center">
+            Distribución porcentual de montos
+          </div>
+          <canvas id="chartPolar"></canvas>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -59,7 +75,6 @@ import Chart from "chart.js/auto";
 const resumen = ref<any[]>([]);
 
 onMounted(() => {
-  // Inicializa tarjetas de resumen
   resumen.value = [
     {
       label: "Total de solicitudes",
@@ -91,20 +106,88 @@ onMounted(() => {
 });
 
 const renderCharts = () => {
-  // Gráfico de solicitudes (doughnut)
-  const ctx1 = document.getElementById("chartSolicitudes") as HTMLCanvasElement;
-  new Chart(ctx1, {
-    type: "doughnut",
+  // 1️⃣ Barras horizontales
+  new Chart(document.getElementById("chartSolicitudesH") as HTMLCanvasElement, {
+    type: "bar",
     data: {
       labels: ["Aprobadas", "Rechazadas", "En análisis"],
       datasets: [
         {
+          label: "Cantidad",
           data: [
             data.summary.aprobadas,
             data.summary.rechazadas,
             data.summary.enAnalisis,
           ],
           backgroundColor: ["#4CAF50", "#F44336", "#FFC107"],
+          borderRadius: 8,
+        },
+      ],
+    },
+    options: {
+      indexAxis: "y", // 🔹 barras horizontales
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        x: { beginAtZero: true },
+      },
+    },
+  });
+
+  // 2️⃣ Línea (simulando evolución)
+  const labels = [
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+  ];
+  const montos = data.montos.map((m) => m.monto);
+  new Chart(document.getElementById("chartLineaMontos") as HTMLCanvasElement, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Montos aprobados ($)",
+          data: montos.slice(0, 10),
+          borderColor: "#2196F3",
+          backgroundColor: "rgba(33,150,243,0.2)",
+          tension: 0.3,
+          fill: true,
+          pointRadius: 4,
+          pointBackgroundColor: "#2196F3",
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true },
+      },
+      plugins: {
+        legend: { position: "bottom" },
+      },
+    },
+  });
+
+  // 3️⃣ Radar (comparativa)
+  new Chart(document.getElementById("chartRadar") as HTMLCanvasElement, {
+    type: "radar",
+    data: {
+      labels: data.montos.map((m) => m.tipo),
+      datasets: [
+        {
+          label: "Monto relativo",
+          data: data.montos.map((m) => m.monto / 1000),
+          backgroundColor: "rgba(76,175,80,0.3)",
+          borderColor: "#4CAF50",
+          pointBackgroundColor: "#4CAF50",
         },
       ],
     },
@@ -115,27 +198,30 @@ const renderCharts = () => {
     },
   });
 
-  // Gráfico de montos (bar)
-  const ctx2 = document.getElementById("chartMontos") as HTMLCanvasElement;
-  new Chart(ctx2, {
-    type: "bar",
+  // 4️⃣ Polar area (distribución)
+  new Chart(document.getElementById("chartPolar") as HTMLCanvasElement, {
+    type: "polarArea",
     data: {
       labels: data.montos.map((m) => m.tipo),
       datasets: [
         {
-          label: "Monto aprobado ($)",
           data: data.montos.map((m) => m.monto),
-          backgroundColor: "#2196F3",
-          borderRadius: 6,
+          backgroundColor: [
+            "#2196F3",
+            "#4CAF50",
+            "#FFC107",
+            "#FF5722",
+            "#9C27B0",
+            "#00BCD4",
+            "#8BC34A",
+            "#E91E63",
+          ],
         },
       ],
     },
     options: {
-      scales: {
-        y: { beginAtZero: true },
-      },
       plugins: {
-        legend: { display: false },
+        legend: { position: "right" },
       },
     },
   });
@@ -146,38 +232,14 @@ const renderCharts = () => {
 .v-card-title {
   font-weight: 600;
 }
-
-.text-center {
-  text-align: center;
-}
-
-canvas {
-  width: 100%;
-}
-
-/* Redondeo general */
 .v-card {
   border-radius: 12px;
 }
-
-/* Subtítulo */
-.v-card-subtitle {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.6);
+canvas {
+  width: 100%;
+  max-height: 260px;
 }
-
-/* 🔥 Igualar altura de ambos gráficos */
-.v-col > .v-card {
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Centrar ambos gráficos perfectamente */
-.v-col canvas {
-  max-height: 240px;
-  margin: 0 auto;
-  display: block;
+.text-center {
+  text-align: center;
 }
 </style>
