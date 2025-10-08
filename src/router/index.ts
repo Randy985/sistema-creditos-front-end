@@ -33,9 +33,26 @@ const router = createRouter({
 router.beforeEach((to) => {
   const auth = useAuthStore()
 
-  if (!auth.user && localStorage.getItem('user')) auth.initialize()
-  if (to.meta.requiresAuth && !auth.accessToken) return '/login'
-  if (to.meta.guest && auth.accessToken) return '/dashboard'
+  // inicializa si hay user en localStorage
+  if (!auth.user && localStorage.getItem('user')) {
+    try {
+      auth.initialize()
+    } catch (err) {
+      console.error('Error al inicializar auth:', err)
+    }
+  }
+
+  // Protege rutas
+  if (to.meta.requiresAuth && !auth.accessToken) {
+    return { path: '/login' }
+  }
+
+  // Evita que usuarios logueados vean login
+  if (to.meta.guest && auth.accessToken) {
+    return { path: '/dashboard' }
+  }
+
+  return true
 })
 
 export default router
