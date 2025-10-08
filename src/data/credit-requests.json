@@ -1,0 +1,36 @@
+{
+  "requests": [
+    {
+      "id": 1,
+      "tipo": "Crédito 7 días",
+      "persona": "Natural",
+      "monto": 5000,
+      "plazo": "7 días",
+      "tasa": "5%",
+      "estado": "Ingresado"
+    },
+    {
+      "id": 2,
+      "tipo": "Crédito 30 días",
+      "persona": "Jurídica",
+      "monto": 25000,
+      "plazo": "30 días",
+      "tasa": "8%",
+      "estado": "En análisis"
+    },
+    {
+      "id": 3,
+      "tipo": "Crédito herramientas",
+      "persona": "Natural",
+      "monto": 12000,
+      "plazo": "60 días",
+      "tasa": "6.5%",
+      "estado": "Aprobado"
+    }
+  ],
+  "creditTypes": [
+    { "id": 1, "nombre": "Crédito 7 días", "plazo": "7 días", "tasa": "5%" },
+    { "id": 2, "nombre": "Crédito 8-30 días", "plazo": "30 días", "tasa": "8%" },
+    { "id": 3, "nombre": "Crédito de herramientas", "plazo": "60 días", "tasa": "6.5%" }
+  ]
+}

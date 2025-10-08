@@ -1,0 +1,31 @@
+{
+  "authorizations": [
+    {
+      "id": 101,
+      "solicitante": "Carlos Pérez",
+      "tipoCredito": "Crédito 7 días",
+      "monto": 5000,
+      "plazo": "7 días",
+      "analista": "Javier Pineda",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 102,
+      "solicitante": "María López",
+      "tipoCredito": "Crédito 8-30 días",
+      "monto": 18000,
+      "plazo": "30 días",
+      "analista": "Javier Pineda",
+      "estado": "Aprobado"
+    },
+    {
+      "id": 103,
+      "solicitante": "Empresa Alfa S.A.",
+      "tipoCredito": "Crédito herramientas",
+      "monto": 42000,
+      "plazo": "60 días",
+      "analista": "Javier Pineda",
+      "estado": "Rechazado"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "credits": [
+    {
+      "id": 201,
+      "cliente": "Carlos Pérez",
+      "tipoCredito": "Crédito 7 días",
+      "monto": 5000,
+      "estadoContrato": "Generado",
+      "pagaré": "Pendiente"
+    },
+    {
+      "id": 202,
+      "cliente": "María López",
+      "tipoCredito": "Crédito 8-30 días",
+      "monto": 18000,
+      "estadoContrato": "Enviado",
+      "pagaré": "Firmado"
+    },
+    {
+      "id": 203,
+      "cliente": "Empresa Alfa S.A.",
+      "tipoCredito": "Crédito herramientas",
+      "monto": 42000,
+      "estadoContrato": "Pendiente",
+      "pagaré": "Pendiente"
+    }
+  ]
+}

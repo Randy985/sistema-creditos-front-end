@@ -1,0 +1,39 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "nombre": "DUI del solicitante",
+      "tipoPersona": "Natural",
+      "tipoCredito": "Crédito 7 días",
+      "estado": "Cargado"
+    },
+    {
+      "id": 2,
+      "nombre": "NIT / Registro fiscal",
+      "tipoPersona": "Natural",
+      "tipoCredito": "Crédito 7 días",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 3,
+      "nombre": "Escritura de constitución",
+      "tipoPersona": "Jurídica",
+      "tipoCredito": "Crédito 8-30 días",
+      "estado": "Pendiente"
+    },
+    {
+      "id": 4,
+      "nombre": "Registro fiscal del representante legal",
+      "tipoPersona": "Jurídica",
+      "tipoCredito": "Crédito 8-30 días",
+      "estado": "Cargado"
+    },
+    {
+      "id": 5,
+      "nombre": "Pagaré firmado",
+      "tipoPersona": "Natural / Jurídica",
+      "tipoCredito": "Todos",
+      "estado": "Incompleto"
+    }
+  ]
+}

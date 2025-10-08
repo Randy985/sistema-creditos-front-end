@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "totalSolicitudes": 120,
+    "aprobadas": 82,
+    "rechazadas": 15,
+    "enAnalisis": 23
+  },
+  "montos": [
+    { "tipo": "Crédito 7 días", "monto": 25000 },
+    { "tipo": "Crédito 8-30 días", "monto": 48000 },
+    { "tipo": "Crédito herramientas", "monto": 32000 }
+  ]
+}
