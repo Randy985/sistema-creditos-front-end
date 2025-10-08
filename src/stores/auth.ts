@@ -24,7 +24,7 @@ export const useAuthStore = defineStore("auth", {
       this.error = "";
 
       try {
-        const { data } = await axios.get("/src/data/usuarios.json");
+        const { data } = await axios.get("/data/usuarios.json");
         const user = data.find(
           (u: User) => u.email === email && u.password === password
         );
