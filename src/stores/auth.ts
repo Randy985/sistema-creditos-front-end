@@ -24,8 +24,12 @@ export const useAuthStore = defineStore("auth", {
       this.error = "";
 
       try {
-        const { data } = await axios.get("/data/usuarios.json");
-        const user = data.find(
+        const res = await fetch("/src/data/usuarios.json");
+        const data = await res.json();
+
+        // Asegura que el contenido sea un array
+        const users = Array.isArray(data) ? data : [];
+        const user = users.find(
           (u: User) => u.email === email && u.password === password
         );
 
@@ -43,6 +47,7 @@ export const useAuthStore = defineStore("auth", {
       } finally {
         this.loading = false;
       }
+
     },
 
     logout() {
