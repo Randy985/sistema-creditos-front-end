@@ -7,7 +7,7 @@
         Analítica de créditos
       </v-card-title>
       <v-card-subtitle>
-        Análisis avanzado de solicitudes, montos y comportamiento de aprobación.
+        Análisis de solicitudes, montos y comportamiento de aprobación.
       </v-card-subtitle>
     </v-card>
 

@@ -51,11 +51,15 @@
     </v-app-bar>
 
     <!-- Content -->
-    <v-main :class="isDark ? 'bg-grey-darken-3' : 'bg-grey-lighten-4'">
-      <v-container fluid class="py-6 fade-in" style="padding-inline: 30px;">
-        <router-view />
-      </v-container>
-    </v-main>
+<v-main
+  :class="isDark ? 'bg-grey-darken-3' : 'bg-grey-lighten-4'"
+  style="height: 100vh; overflow-y: auto;"
+>
+  <v-container fluid class="py-6 fade-in" style="padding-inline: 30px;">
+    <router-view />
+  </v-container>
+</v-main>
+
 
   </v-app>
 </template>
