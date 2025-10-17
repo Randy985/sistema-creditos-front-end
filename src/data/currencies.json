@@ -1,0 +1,40 @@
+{
+  "currencies": [
+    {
+      "codigo": "GTQ",
+      "nombre": "Quetzal guatemalteco",
+      "simbolo": "Q",
+      "pais": "Guatemala"
+    },
+    {
+      "codigo": "USD",
+      "nombre": "Dólar estadounidense",
+      "simbolo": "$",
+      "pais": "El Salvador"
+    },
+    {
+      "codigo": "HNL",
+      "nombre": "Lempira hondureño",
+      "simbolo": "L",
+      "pais": "Honduras"
+    },
+    {
+      "codigo": "NIO",
+      "nombre": "Córdoba nicaragüense",
+      "simbolo": "C$",
+      "pais": "Nicaragua"
+    },
+    {
+      "codigo": "CRC",
+      "nombre": "Colón costarricense",
+      "simbolo": "₡",
+      "pais": "Costa Rica"
+    },
+    {
+      "codigo": "PAB",
+      "nombre": "Balboa panameño",
+      "simbolo": "B/.",
+      "pais": "Panamá"
+    }
+  ]
+}

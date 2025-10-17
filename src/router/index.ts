@@ -11,18 +11,24 @@ const routes = [
   { path: '/login', component: LoginPage, meta: { guest: true } },
 
   {
-    path: '/dashboard',
-    component: DashboardLayout,
-    meta: { requiresAuth: true },
-    children: [
-      { path: '', component: DashboardPage },
-      { path: 'solicitud-de-credito', component: () => import('@/pages/credit-request/CreditRequestPage.vue') },
-      { path: 'documentacion', component: () => import('@/pages/documentation/DocumentationPage.vue') },
-      { path: 'autorizacion', component: () => import('@/pages/authorization/AuthorizationPage.vue') },
-      { path: 'servicio-al-cliente', component: () => import('@/pages/customer-service/CustomerServicePage.vue') },
-      { path: 'analitica', component: () => import('@/pages/analytics/AnalyticsPage.vue') },
-    ],
-  },
+  path: '/dashboard',
+  component: DashboardLayout,
+  meta: { requiresAuth: true },
+  children: [
+    { path: '', component: DashboardPage },
+    { path: 'solicitud-de-credito', component: () => import('@/pages/credit-request/CreditRequestPage.vue') },
+    { path: 'documentacion', component: () => import('@/pages/documentation/DocumentationPage.vue') },
+    { path: 'autorizacion', component: () => import('@/pages/authorization/AuthorizationPage.vue') },
+    { path: 'servicio-al-cliente', component: () => import('@/pages/customer-service/CustomerServicePage.vue') },
+    { path: 'analitica', component: () => import('@/pages/analytics/AnalyticsPage.vue') },
+
+    // 👇 Nuevos mantenimientos
+    { path: 'empresas', component: () => import('@/pages/companies/CompaniesPage.vue') },
+    { path: 'monedas', component: () => import('@/pages/currencies/CurrenciesPage.vue') },
+    { path: 'usuarios', component: () => import('@/pages/users/UsersPage.vue') },
+  ],
+},
+
 ]
 
 const router = createRouter({

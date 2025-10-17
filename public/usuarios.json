@@ -5,6 +5,30 @@
     "email": "admin@demo.com",
     "password": "123456",
     "roleId": 1,
-    "name": "Administrador"
+    "name": "Administrador General"
+  },
+  {
+    "id": 2,
+    "username": "gerente",
+    "email": "gerente@demo.com",
+    "password": "123456",
+    "roleId": 2,
+    "name": "Gerente de Sala"
+  },
+  {
+    "id": 3,
+    "username": "analista",
+    "email": "analista@demo.com",
+    "password": "123456",
+    "roleId": 3,
+    "name": "Analista de Créditos"
+  },
+  {
+    "id": 4,
+    "username": "autorizador",
+    "email": "autorizador@demo.com",
+    "password": "123456",
+    "roleId": 4,
+    "name": "Autorizador Principal"
   }
 ]

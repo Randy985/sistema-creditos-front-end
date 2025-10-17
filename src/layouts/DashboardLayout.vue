@@ -98,7 +98,11 @@ const navItems = [
   { to: "/dashboard/autorizacion", label: "Autorización", icon: "check-circle" },
   { to: "/dashboard/servicio-al-cliente", label: "Servicio al cliente", icon: "handshake" },
   { to: "/dashboard/analitica", label: "Analítica", icon: "chart-pie" },
+  { to: "/dashboard/empresas", label: "Empresas", icon: "building" },
+  { to: "/dashboard/monedas", label: "Monedas", icon: "coins" },
+  { to: "/dashboard/usuarios", label: "Usuarios", icon: "user" },
 ];
+
 
 // Activo exacto (evita que /dashboard quede activo en rutas hijas)
 const isActive = (path: string) => route.path === path;

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Administrador",
+    "descripcion": "Control total del sistema y gestión de empresas, usuarios y roles.",
+    "permisos": ["*"]
+  },
+  {
+    "id": 2,
+    "nombre": "Gerente de sala",
+    "descripcion": "Solicita créditos y administra documentación.",
+    "permisos": ["solicitud", "documentacion"]
+  },
+  {
+    "id": 3,
+    "nombre": "Analista",
+    "descripcion": "Analiza solicitudes y genera reportes de analítica.",
+    "permisos": ["autorizacion", "analitica"]
+  },
+  {
+    "id": 4,
+    "nombre": "Autorizador",
+    "descripcion": "Autoriza o rechaza solicitudes de crédito.",
+    "permisos": ["autorizacion"]
+  }
+]

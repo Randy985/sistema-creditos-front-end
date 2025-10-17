@@ -1,0 +1,46 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "nombre": "Financiera Centroamericana S.A.",
+      "pais": "Guatemala",
+      "moneda": "GTQ",
+      "estado": "Activa"
+    },
+    {
+      "id": 2,
+      "nombre": "CrediPlus El Salvador S.A. de C.V.",
+      "pais": "El Salvador",
+      "moneda": "USD",
+      "estado": "Activa"
+    },
+    {
+      "id": 3,
+      "nombre": "MicroLending Honduras S.A.",
+      "pais": "Honduras",
+      "moneda": "HNL",
+      "estado": "Activa"
+    },
+    {
+      "id": 4,
+      "nombre": "Financia Nicaragua S.A.",
+      "pais": "Nicaragua",
+      "moneda": "NIO",
+      "estado": "Activa"
+    },
+    {
+      "id": 5,
+      "nombre": "Créditos Ticos S.A.",
+      "pais": "Costa Rica",
+      "moneda": "CRC",
+      "estado": "Inactiva"
+    },
+    {
+      "id": 6,
+      "nombre": "Panacrédito S.A.",
+      "pais": "Panamá",
+      "moneda": "PAB",
+      "estado": "Activa"
+    }
+  ]
+}
